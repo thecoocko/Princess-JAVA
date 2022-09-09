@@ -1,7 +1,6 @@
-package org.example;
-
+import org.labazero.labazero;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        labazero.helloWorld();
     }
 }
