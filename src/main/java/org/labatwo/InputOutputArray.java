@@ -1,9 +1,7 @@
 package org.labatwo;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.util.Random;
 import java.util.Scanner;
 
 // Розробити програму, що дозволить вам створити, як з клавіатури
@@ -16,18 +14,30 @@ import java.util.Scanner;
 // систему сканування клавіатури. Диапазон рандомних чисел для створення елементів матриці повинен
 // зверігатись в спеціальних константах.
 // Як завдання підвищеної складності додати  розрахунок середнього геометричного елементів матриці.
-public class LabaTwo {
+public class InputOutputArray {
 
     int x;
     int y;
+    int choice;
+    private static int randomBounds = 100;
 
-    public LabaTwo(int x, int y) {
+    public InputOutputArray(int x, int y, int choice) {
         this.x=x;
         this.y=y;
+        this.choice=choice;
     }
-    public  int[][] setRandomMatrix(){
 
-        return array
+    public  int[][] setRandomMatrix(){
+        Random random = new Random();
+        int [][]array = new int [x][];
+        for(int i =0;i<x;i++){
+            array[i] = new int[y];
+            for(int j=0; j<y;j++){
+                array[i][j] = random.nextInt(randomBounds);
+            }
+        }
+
+        return array;
     }
     public int[][] setMatrix() throws IOException {
         if(x > 20 || y > 20) {x = 20; y = 20;}
@@ -42,9 +52,18 @@ public class LabaTwo {
         return array;
     }
 
-    public void getMatrix() throws IOException {
-        LabaTwo obj = new LabaTwo(x,y);
-        int [][]array = obj.setMatrix();
+    public int[][] getMatrix() throws IOException {
+        int [][]array = new int[x][];
+        if(choice==1){
+            array = setRandomMatrix();
+        }else{
+            array = setMatrix();
+        }
+        return array;
+    }
+
+    public void printMatrix() throws IOException {
+        int [][]array = getMatrix();
         for(int i = 0; i < x;i++){
             for(int j=0; j<y;j++){
                 System.out.print(array[i][j]+" ");
