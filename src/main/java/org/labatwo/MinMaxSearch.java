@@ -1,5 +1,6 @@
 package org.labatwo;
-import org.jetbrains.annotations.NotNull;
+
+
 import java.io.IOException;
 
 public class MinMaxSearch extends CreateMatrix {
@@ -8,7 +9,7 @@ public class MinMaxSearch extends CreateMatrix {
         super(x, y,choice);
     }
 
-    public int getMin(int[] @NotNull []array) throws IOException {
+    public int getMin(int[][]array) {
         int minimum=array[0][0];
         for(int i = 0; i < x;i++){
             for(int j=0; j<y;j++){
@@ -18,7 +19,7 @@ public class MinMaxSearch extends CreateMatrix {
         return minimum;
     }
 
-    public int getMax(int [] @NotNull [] array ) throws IOException{
+    public int getMax(int [][] array ){
         int maximum=array[0][0];
         for(int i = 0; i < x;i++){
             for(int j=0; j<y;j++){

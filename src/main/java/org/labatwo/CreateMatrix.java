@@ -30,7 +30,7 @@ public class CreateMatrix {
 
         return array;
     }
-    public int[][] setMatrix() throws IOException {
+    public int[][] setMatrix()  {
         if(x > 20 || y > 20) {x = 20; y = 20;}
         int [][] array = new int[x][];
         Scanner input = new Scanner(System.in);
@@ -53,7 +53,7 @@ public class CreateMatrix {
         return array;
     }
 
-    public void printMatrix(int [][]array) throws IOException {
+    public void printMatrix(int [][]array) {
 
         for(int i = 0; i < x;i++){
             for(int j=0; j<y;j++){
