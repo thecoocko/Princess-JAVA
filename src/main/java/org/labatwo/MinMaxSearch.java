@@ -1,26 +1,30 @@
 package org.labatwo;
-
+import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 
-public class MinMaxSearch extends  InputOutputArray{
+public class MinMaxSearch extends CreateMatrix {
 
-    public MinMaxSearch(int x, int y ,int choice) {
+    public MinMaxSearch(int x, int y ,int choice) throws IOException {
         super(x, y,choice);
     }
 
-    public void getMin() throws IOException {
-        int [][] array = getMatrix();
-        System.out.print("adasdasdasdasdsad\n");
+    public int getMin(int[] @NotNull []array) throws IOException {
+        int minimum=array[0][0];
         for(int i = 0; i < x;i++){
             for(int j=0; j<y;j++){
-                System.out.print(array[i][j]+" ");
+                minimum=Math.min(minimum,array[i][j]);
             }
-            System.out.println();
         }
+        return minimum;
     }
 
-    public void getMax(){
-        System.out.print("pusto");
-
+    public int getMax(int [] @NotNull [] array ) throws IOException{
+        int maximum=array[0][0];
+        for(int i = 0; i < x;i++){
+            for(int j=0; j<y;j++){
+                maximum=Math.max(maximum,array[i][j]);
+            }
+        }
+        return maximum;
     }
 }
