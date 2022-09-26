@@ -15,7 +15,7 @@ public abstract class Human {
     }
 
     public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
+        this.patronymic = patronymic
     }
 
     public String getName() {
