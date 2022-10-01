@@ -5,13 +5,17 @@ import org.labatwo.MinMaxSearch;
 import org.labatwo.ArifMean;
 import java.io.IOException;
 import java.util.Scanner;
+import org.labathree.model.Student;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        Student student=new Student();
+        student.print();
         LabaZero.helloWorld();
         int[] arguments = new int[3];
-        System.out.println("Enter x, y, choice:" +
-                "\n(random generation matrix - 1\tkeyboard generation matrix - 2)\n");
+        System.out.println("\nFirst two: x, y - size of matrix. The third is your choice." +
+                "\nYou can choose between random generation matrix (1) or fill in manually (2)" +
+                "\nPlease enter 3 arguments below with \"enter\" separator.\n");
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 3; i++) {
                 arguments[i]=input.nextInt();
