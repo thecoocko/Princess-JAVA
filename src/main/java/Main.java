@@ -9,8 +9,9 @@ import org.labathree.model.Student;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Student student=new Student("male");
-        student.print();
+        Student student=new Student("male","Mykola","Mykolayovych","124-19-2","FIT");
+        System.out.println(student.createStudent());
+        System.out.println(student.getGender());
         LabaZero.helloWorld();
         int[] arguments = new int[3];
         System.out.println("\nFirst two: x, y - size of matrix. The third is your choice." +
