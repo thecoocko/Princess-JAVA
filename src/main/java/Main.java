@@ -9,7 +9,7 @@ import org.labathree.model.Student;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Student student=new Student();
+        Student student=new Student("male");
         student.print();
         LabaZero.helloWorld();
         int[] arguments = new int[3];

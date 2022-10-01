@@ -1,10 +1,21 @@
 package org.labathree.model;
-import java.io.IOException;
-import java.util.Scanner;
+
 
 public  class Student implements Human  {
-    Sex h =  Sex.diverse;
+
+    private final String gender;
+    Sex[] gender1= Sex.values();
+
+    public Student(String gender){
+        this.gender=gender;
+    }
+
+
     public  void print(){
-        System.out.println(h);
+        for (Sex g : Sex.values()) {
+            if(g.name().equals(gender)){
+                System.out.println("THIS IS A BOY!!");
+            }
+        }
     }
 }
