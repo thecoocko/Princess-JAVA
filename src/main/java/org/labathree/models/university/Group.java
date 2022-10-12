@@ -1,0 +1,4 @@
+package org.labathree.models.university;
+
+public class Group {
+}

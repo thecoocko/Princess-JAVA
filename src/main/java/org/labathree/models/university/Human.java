@@ -1,4 +1,4 @@
-package org.labathree.model;
+package org.labathree.models.university;
 
 public interface Human {
     enum Sex {male,female,diverse}

@@ -1,5 +1,7 @@
 package org.labathree.controller;
-import org.labathree.model.Student;
+import org.labathree.models.university.Student;
+
+import java.text.MessageFormat;
 
 public class StudentCreate extends Student {
 
@@ -7,8 +9,14 @@ public class StudentCreate extends Student {
         super(gender, name, lastName, group, faculty);
     }
 
-    public Student createStudent(){
-        Student newStudent = new Student("female","Mykola","Mykolayovych","124-19-2","FIT");
+    public Student createStudent(String gender, String name, String lastName, String group, String faculty){
+        Student newStudent = new Student(gender,name,lastName,group,faculty);
         return newStudent;
     }
+
+    public String getStudent(){
+        String string = MessageFormat.format("Student {0} {1}, {2}, {3}, {4}.",this.lastName,this.name,this.gender, this.group, this.faculty);
+        return string;
+    }
+
 }
