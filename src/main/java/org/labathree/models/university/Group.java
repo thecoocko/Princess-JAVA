@@ -4,7 +4,17 @@ import java.util.List;
 
 public class Group{
     private String name;
+    private Human boss;
+    private
     List<Student> students;
+
+    public Human getBoss() {
+        return boss;
+    }
+
+    public void setBoss(Human boss) {
+        this.boss = boss;
+    }
 
     public String getName() {
         return name;

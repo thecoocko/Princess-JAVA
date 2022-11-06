@@ -4,7 +4,16 @@ import java.util.List;
 
 public class Department  {
     private String name;
-    List<Faculty> facultyList;
+    private Human boss;
+    private List<Group> GroupList;
+
+    public Human getBoss() {
+        return boss;
+    }
+
+    public void setBoss(Human boss) {
+        this.boss = boss;
+    }
 
     public String getName() {
         return name;
@@ -14,11 +23,12 @@ public class Department  {
         this.name = name;
     }
 
-    public List<Faculty> getFacultyList() {
-        return facultyList;
+    public List<Group> getGroupList() {
+        return GroupList;
     }
 
-    public void setFacultyList(List<Faculty> facultyList) {
-        this.facultyList = facultyList;
+    public void setGroupList(List<Group> groupList) {
+        GroupList = groupList;
     }
+
 }

@@ -1,28 +1,22 @@
 package org.labathree.controller;
 
+import org.labathree.models.university.Department;
 import org.labathree.models.university.Faculty;
-import org.labathree.models.university.Group;
-import org.labathree.models.university.Student;
+import org.labathree.models.university.Human;
 
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.Random;
 
-public class FacultyCreate {
 
-    public Faculty create(int amountOfGroups, String name){
-        Random random = new Random();
-        int randName = random.nextInt(1,500);
-        GroupCreate groupCreate = new GroupCreate();
+public interface FacultyCreate {
+
+    default Faculty create(List<Department> departments, Human boss, String facultyName) {
         Faculty faculty = new Faculty();
-        List<Group> groups = new ArrayList<>();
-        for (int i = 0; i < amountOfGroups; i++) {
-            Group group = groupCreate.create(40,"Group "+ randName);
-            groups.add(group);
-        }
-        faculty.setGroups(groups);
-        faculty.setName(name);
+        faculty.setBoss(boss);
+        faculty.setDepartments(departments);
+        faculty.setName(facultyName);
 
         return faculty;
+
     }
 }
