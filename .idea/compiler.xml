@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="untitled3" />
         <module name="Butenko" />
+        <module name="Butenko - Copy" />
       </profile>
     </annotationProcessing>
   </component>
